@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Yönetim Otomasyonu</title>
+    <style>
+        /* CSS: Sayfanın Tasarımı */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        header {
+            background-color: #1a365d;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 10px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            color: #2c5282;
+            margin-bottom: 2rem;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border-bottom: 5px solid transparent;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            border-bottom: 5px solid #3182ce;
+        }
+        .card h3 {
+            color: #2b6cb0;
+            margin-top: 0;
+        }
+        .btn-container {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .demo-btn {
+            background-color: #3182ce;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+        .demo-btn:hover {
+            background-color: #2b6cb0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Site & Apartman Yönetim Otomasyonu</h1>
+        <p>Akıllı, Güvenli ve Şeffaf Aidat Takip Sistemi</p>
+    </header>
+
+    <div class="container">
+        <h2 class="section-title">Proje Özeti</h2>
+        
+        <div class="grid-container">
+            <div class="card" onclick="bilgiVer('Dijitalleşme')">
+                <h3>1. Dijital ve Hatasız Yönetim</h3>
+                <p>Manuel aidat takibini, kağıt-kalem veya karmaşık Excel dosyalarından kurtararak tamamen dijital ve hatasız bir sisteme taşıyoruz.</p>
+            </div>
+            
+            <div class="card" onclick="bilgiVer('Borçlandırma')">
+                <h3>2. Otomatik Borçlandırma</h3>
+                <p>Tek tıkla tüm dairelere toplu aidat ataması yapıyor ve ödeme yapan sakinlerin bakiyelerini anında sistemden düşüyoruz.</p>
+            </div>
+            
+            <div class="card" onclick="bilgiVer('Raporlama')">
+                <h3>3. Şeffaf Raporlama</h3>
+                <p>Yöneticilerin güncel kasa durumunu, toplam alacakları ve borçlu sakinleri tek bir ekranda anlık görebilmesini sağlıyoruz.</p>
+            </div>
+            
+            <div class="card" onclick="bilgiVer('Güvenlik')">
+                <h3>4. Güvenli Altyapı</h3>
+                <p>MySQL veritabanı ve şifreli sistemimizle verileri güvenle saklarken, binlerce kaydı saniyeler içinde kasmadan yönetiyoruz.</p>
+            </div>
+        </div>
+
+        <div class="btn-container">
+            <button class="demo-btn" onclick="projeyiBaslat()">Sistemi Test Et</button>
+        </div>
+    </div>
+
+    <script>
+        function bilgiVer(konu) {
+            // Kartlara tıklandığında çalışacak basit bir uyarı mesajı
+            alert("Sunum Notu: " + konu + " modülü hakkında hocaya ekstra detay verebilirsiniz.");
+        }
+
+        function projeyiBaslat() {
+            // Butona tıklandığında çalışacak etkileşim
+            let onay = confirm("Projenin veritabanı bağlantısı simüle edilsin mi?");
+            if (onay) {
+                alert("Harika! Veritabanı bağlandı. Yönlendiriliyorsunuz...");
+                // Buraya ileride projenin asıl giriş sayfasının linki eklenebilir
+            } else {
+                alert("İşlem iptal edildi. Sunuma devam edebilirsiniz.");
+            }
+        }
+    </script>
+
+</body>
+</html>
